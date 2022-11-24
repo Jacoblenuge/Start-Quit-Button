@@ -2,13 +2,16 @@
 Boolean start=false,noNowReallyStart=false;
 float QuitButtonX,QuitButtonY,QuitButtonWidth, QuitButtonHeight;
 int appWidth,appHeight;
-color QuitButtonColour, yellow=#FFFF00 , purple=#FF00FF ;
+color QuitButtonColour, yellow=#FFFF00 , purple=#FF00FF ; 
 //
 void setup()
 {
+   frameRate(4);
   size (1200,1000);
+  displayOrientation();
   appWidth = width ;
   appHeight = height ;
+  //
 //Poupulation
 float centerX = appWidth * 1/2 ; //Point
 float centerY = appHeight * 1/2 ;//Point
@@ -20,10 +23,11 @@ QuitButtonHeight = appHeight * 1/2;//Line not point thus use formula
 //
 void draw ()
 {
+
 if(noNowReallyStart==true){//Actual start IF
-  background(255,255,255);//Night Mode not considered yet
+ background(random(0, 255), random(0, 255), random(0, 255));//Night Mode not considered yet
   //
-  //Logical Rectangle
+  //Logical Rectangle 
   println("X-Value",QuitButtonX, mouseX ,QuitButtonX+QuitButtonWidth );
   println("Y-Value" ,QuitButtonY ,mouseY ,QuitButtonY+QuitButtonHeight);
   //
