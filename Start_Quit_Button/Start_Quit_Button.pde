@@ -25,21 +25,19 @@ if(noNowReallyStart==true){//Actual start IF
 //
 void keyPressed ()
 {
-// 
+
+//User Initiated Start Screen
   if(key==' ' && start==true ) noNowReallyStart =  true;
   //
-  //Prototype keyboard quit button or shortcut
-  if ( key=='Q' || key=='q') exit();
-  if ( keyCode == BACKSPACE ) exit();
+ 
   //
+  keyboardShortCuts();
 };// End keyPressed
 //
 void mousePressed () 
 {
   //
-  //OS Level Start Button
-  start = true;
-  println("To Sart Press The Space Bar");
+  OS_Start();
   //
   //Quit Button:Logical Rectangle,see println in draw()
   if (noNowReallyStart && mouseX>QuitButtonX &&  mouseX<QuitButtonX+QuitButtonWidth && mouseY>QuitButtonY && mouseY<QuitButtonY+QuitButtonHeight) exit();
