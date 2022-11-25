@@ -1,8 +1,12 @@
 //Global Variables
 Boolean start=false,noNowReallyStart=false;
 float QuitButtonX,QuitButtonY,QuitButtonWidth, QuitButtonHeight;
-int appWidth,appHeight;
+int appWidth,appHeight,fontSize;
 color QuitButtonColour, yellow=#FFFF00 , purple=#FF00FF ; 
+color Red=#FF0D0D,resetDefaultInk=#FFFFFF,Black=#000000;
+String title = "X";
+float titleX, titleY, titleWidth, titleHeight;
+PFont titleFont; 
 //
 void setup()
 {
@@ -12,11 +16,13 @@ void setup()
   appWidth = width ;
   appHeight = height ;
  Population();
+ background(255,13,77);
+//
 };//End setup
 //
 void draw ()
 {
-
+if (noNowReallyStart == true) text();
 if(noNowReallyStart==true){//Actual start IF
  ProgramDraw();
 }//End IF-start
